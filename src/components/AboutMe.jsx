@@ -59,12 +59,13 @@ const AboutMe = () => {
 
 	return (
 		<section className="text-white">
-			<div className="grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+			<div className="grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 ">
 				<Image
 					src="/images/code-one.jpg"
 					alt="Books and Laptop"
 					width={500}
 					height={500}
+					className="h-full rounded-full"
 				/>
 				<div className="mt-4 md:mt-0 text-left flex flex-col h-full">
 					<h1 className="text-4xl font-bold text-white mb-4">
@@ -104,6 +105,7 @@ const AboutMe = () => {
 						</TabButton>
 					</div>
 					<div className="mt-8">
+						{/* t is tab, cant redeclare  */}
 						{TAB_DATA.find((t) => t.id === tab).content}
 					</div>
 				</div>
