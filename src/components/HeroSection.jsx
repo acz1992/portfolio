@@ -51,7 +51,7 @@ const HeroSection = () => {
 						<Image
 							src="/images/my-pic.png"
 							alt="Myself"
-							className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-e-full" // rounded-full
+							className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2  rounded-e-full" // rounded-full
 							width={300}
 							height={300}
 						/>
