@@ -8,10 +8,10 @@ import Footer from "./components/Footer";
 
 export default function Home() {
 	return (
-		//Otehrwise bg-[#121212 ]
+		//Otherwise bg-[#121212 ]
 		<main className="flex min-h-screen flex-col bg-[#202833] container ">
 			<Navbar />
-			<div className="container mt-24 mx-auto px-12 py-4 bg-[#202833]">
+			<div className="container mt-24 mx-auto px-12 py-4 bg-[#202833] ">
 				<HeroSection />
 				<AboutMe />
 				<ProjectsSection />
