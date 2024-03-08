@@ -80,7 +80,7 @@ const EmailSection = () => {
 							htmlFor="email"
 							className="text-white block mb-2 text-sm font-medium"
 						>
-							Enter email
+							Enter your email
 						</label>
 						<input
 							name="email"
