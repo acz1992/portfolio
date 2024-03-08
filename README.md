@@ -3,6 +3,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## To do:
 
 Add skills from first Portfolio Sight
+-add props for each
+-import relevant resources such as pics
+-create array and map over it to render squares for each section
 
 ## Tools use
 
@@ -13,6 +16,6 @@ Add skills from first Portfolio Sight
 #### HeroIcons - Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS
 
 [FormSubmit](https://formsubmit.co/)
-online service that simplifies the process of handling form submissions
+online service that simplifies the process of handling form submissions - use email.js?
 
 -   May have to redo process upon deploying profile
