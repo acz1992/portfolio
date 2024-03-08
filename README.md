@@ -12,4 +12,7 @@ Add skills from first Portfolio Sight
 
 #### HeroIcons - Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS
 
-[resend](https://resend.com/)
+[FormSubmit](https://formsubmit.co/)
+online service that simplifies the process of handling form submissions
+
+-   May have to redo process upon deploying profile

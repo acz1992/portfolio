@@ -4,18 +4,20 @@ import Navbar from "./components/Navbar";
 import AboutMe from "./components/AboutMe";
 import ProjectsSection from "./components/ProjectsSection";
 import EmailSection from "./components/EmailSection";
+import Footer from "./components/Footer";
 
 export default function Home() {
 	return (
 		//Otehrwise bg-[#121212 ]
 		<main className="flex min-h-screen flex-col bg-[#202833] container ">
 			<Navbar />
-			<div className="container mt-24 mx-auto px-12 py-4">
+			<div className="container mt-24 mx-auto px-12 py-4 bg-[#202833]">
 				<HeroSection />
 				<AboutMe />
 				<ProjectsSection />
 				<EmailSection />
 			</div>
+			<Footer />
 		</main>
 	);
 }

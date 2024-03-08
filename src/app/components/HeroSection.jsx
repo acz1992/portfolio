@@ -17,12 +17,10 @@ const HeroSection = () => {
 						<TypeAnimation
 							sequence={[
 								"Adam",
-								1000, // wait 1s before replacing "Mice" with "Hamsters"
+								1000,
 								"a Fullstack Developer",
 								1000,
 								"a Tech Connoisseur",
-								1000,
-								"an Aspiring Ukelele superstar",
 								1000,
 							]}
 							wrapper="span"

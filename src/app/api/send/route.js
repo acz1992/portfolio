@@ -1,18 +1,23 @@
-/* import { EmailTemplate } from "../../../components/EmailTemplate";
- */ import { NextResponse } from "next/server";
-import { Resend } from "resend";
+// USING FormSubmit.co instead
+// Resend required my own email domain name
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+/* const resend = new Resend(process.env.RESEND_API_KEY);
+const fromEmail = process.env.FROM_EMAIL;
 
-export async function POST() {
+export async function POST(req, res) {
+	const { email, subject, message } = await req.json();
+	console.log(email, subject, message);
 	try {
 		const data = await resend.emails.send({
-			from: "Adam <acz1992@hhotmail.co.uk>",
-			to: ["acz1992@hotmail.co.uk"],
-			subject: "hello world",
+			from: fromEmail,
+			to: [fromEmail, email],
+			subject: subject,
 			react: (
 				<>
-					<p>Email Body</p>
+					<h1>{subject}</h1>
+					<p>Thank you for contacting us!</p>
+					<p>New message submitted:</p>
+					<p>{message}</p>
 				</>
 			),
 		});
@@ -21,3 +26,4 @@ export async function POST() {
 		return NextResponse.json({ error });
 	}
 }
+ */
