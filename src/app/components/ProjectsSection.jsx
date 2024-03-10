@@ -80,7 +80,10 @@ export const ProjectsSection = () => {
 	);
 
 	return (
-		<section id="projects" className="projects">
+		<section
+			id="projects"
+			className="projects pt-6 border-t border-[#33353F]"
+		>
 			<h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
 				My Projects
 			</h2>
