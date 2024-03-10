@@ -41,11 +41,11 @@ const EmailSection = () => {
 	return (
 		<section
 			id="contact"
-			className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+			className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative pt-6 border-t border-[#33353F]"
 		>
 			<div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
 
-			<div className="">
+			<div className="flex flex-col items-center justify-center">
 				{/*  className="flex flex-col justify-center items-center" */}
 				<h5 className="text-xl font-bold text-white my-2">
 					Let&apos;s Connect
@@ -56,7 +56,7 @@ const EmailSection = () => {
 					is always open. Whether you have a question or just want to
 					say hi, I&apos;ll try my best to get back to you!
 				</p>
-				<div className="socials flex flex-row gap-6">
+				<div className="socials flex flex-row justify-center gap-14">
 					<Link href="https://github.com/acz1992" target="_blank">
 						<Image src={GithubIcon} alt="Github Icon" />
 					</Link>
