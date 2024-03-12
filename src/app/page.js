@@ -9,7 +9,6 @@ import AchievementsSection from "./components/AchievementsSection";
 
 export default function Home() {
 	return (
-		//Otherwise bg-[#121212 ]
 		<main className="flex min-h-screen flex-col bg-[#202833]">
 			<Navbar />
 			<div className="container mt-24 mx-auto px-12 py-4">

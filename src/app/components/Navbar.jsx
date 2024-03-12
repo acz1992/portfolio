@@ -32,7 +32,7 @@ const Navbar = () => {
 				>
 					Home
 				</Link>
-				<div className="mobile-menu md:block md:hidden">
+				<div className="-menu md:block md:hidden">
 					{!navbarOpen ? (
 						<button
 							onClick={() => setNavbarOpen(true)}
