@@ -21,7 +21,7 @@ const projectsData = [
 		image: "/images/projects/task_manager.jpg",
 		tag: ["All", "App"],
 		gitUrl: "https://github.com/acz1992/task_manager/",
-		previewUrl: "https://task-manager-seven-alpha.vercel.app/",
+		previewUrl: "https://portfolio-website-three-xi-41.vercel.app/",
 	},
 	{
 		id: 3,
