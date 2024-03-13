@@ -16,12 +16,12 @@ const projectsData = [
 	},
 	{
 		id: 2,
-		title: "Potography Portfolio Website",
-		description: "Project 2 description",
-		image: "/images/projects/2.png",
-		tag: ["All", "Web"],
-		gitUrl: "/",
-		previewUrl: "/",
+		title: "Task Manager App",
+		description: "Organise the overwhelming",
+		image: "/images/projects/task_manager.jpg",
+		tag: ["All", "App"],
+		gitUrl: "https://github.com/acz1992/task_manager/",
+		previewUrl: "https://task-manager-seven-alpha.vercel.app/",
 	},
 	{
 		id: 3,
