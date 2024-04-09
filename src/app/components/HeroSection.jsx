@@ -35,8 +35,8 @@ const HeroSection = () => {
 						/>
 					</h1>
 					<p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Quisq voluptatum.
+						Creating user-friendly websites and simplifying life
+						through tech.
 					</p>
 					<div>
 						<a href="mailto:acz1992@hotmail.co.uk">
