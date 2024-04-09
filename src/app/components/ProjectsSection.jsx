@@ -7,44 +7,44 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
 	{
 		id: 1,
-		title: "React Portfolio Website",
-		description: "Project 1 description",
-		image: "/images/projects/1.png",
+		title: "MJBeers Photography",
+		description: "Photography Portfolio Site",
+		image: "/images/projects/mitchphotography.png",
 		tag: ["All", "Web"],
-		gitUrl: "/",
-		previewUrl: "/",
+		gitUrl: "https://github.com/acz1992/mjbeers_photography",
+		previewUrl: "https://mjbeers-photography.vercel.app/",
 	},
 	{
 		id: 2,
 		title: "Task Manager App",
 		description: "Organise the overwhelming",
-		image: "/images/projects/task_manager.jpg",
+		image: "/images/projects/taskmanager.png",
 		tag: ["All", "App"],
 		gitUrl: "https://github.com/acz1992/task_manager/",
 		previewUrl: "https://portfolio-website-three-xi-41.vercel.app/",
 	},
 	{
 		id: 3,
-		title: "E-commerce Application",
-		description: "Project 3 description",
-		image: "/images/projects/3.png",
+		title: "Blickfang Blumen",
+		description: "Custom floral arrangements",
+		image: "/images/projects/kateblickfang.png",
 		tag: ["All", "Web"],
-		gitUrl: "/",
-		previewUrl: "/",
+		gitUrl: "https://github.com/acz1992/blickfang-blumen",
+		previewUrl: "https://blickfang-blumen.vercel.app/",
 	},
 	{
 		id: 4,
-		title: "Food Ordering Application",
-		description: "Project 4 description",
+		title: "Movie Booking App",
+		description: "Book films seamlessly",
 		image: "/images/projects/4.png",
-		tag: ["All", "Mobile"],
+		tag: ["All", "App"],
 		gitUrl: "/",
 		previewUrl: "/",
 	},
 	{
 		id: 5,
-		title: "React Firebase Template",
-		description: "Authentication and CRUD operations",
+		title: "Hamish's Outdoor Services",
+		description: "For all your outdoor needs",
 		image: "/images/projects/5.png",
 		tag: ["All", "Web"],
 		gitUrl: "/",
@@ -52,10 +52,10 @@ const projectsData = [
 	},
 	{
 		id: 6,
-		title: "Full-stack Roadmap",
-		description: "Project 5 description",
+		title: "Listfull",
+		description: "Simplify your weekly shop!",
 		image: "/images/projects/6.png",
-		tag: ["All", "Web"],
+		tag: ["All", "App"],
 		gitUrl: "/",
 		previewUrl: "/",
 	},
@@ -100,8 +100,8 @@ export const ProjectsSection = () => {
 				/>
 				<ProjectTag
 					onClick={handleTagChange}
-					name="Mobile"
-					isSelected={tag === "Mobile"}
+					name="App"
+					isSelected={tag === "App"}
 				/>
 			</div>
 			<ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
