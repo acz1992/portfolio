@@ -66,10 +66,6 @@ const EmailSection = () => {
 				</div>
 			</div>
 			<div>
-				<ReCAPTCHA
-					siteChange={siteChange}
-					sitekey={process.env.CAPTCHA_SITE_KEY}
-				/>
 				<form className="flex flex-col" ref={form} onSubmit={sendEmail}>
 					<div className="mb-6">
 						<label
