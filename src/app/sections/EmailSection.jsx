@@ -6,31 +6,20 @@ import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 import emailjs from "emailjs-com";
-import ReCAPTCHA from "react-google-recaptcha";
 
 const EmailSection = () => {
-	const refCaptcha = useRef();
-
 	const form = useRef();
 	const [emailSubmitted, setEmailSubmitted] = useState(false);
 
 	const sendEmail = (e) => {
 		e.preventDefault();
 
-		const token = refCaptcha.current.getValue();
-
-		const params = {
-			"g-recaptcha-response": token,
-		};
-
 		emailjs
 			.sendForm(
 				process.env.YOUR_SERVICE_ID,
 				process.env.YOUR_TEMPLATE_ID,
 				form.current,
-				params,
-				process.env.YOUR_PUBLIC_KEY,
-				"g-recaptcha-response"
+				process.env.YOUR_PUBLIC_KEY
 			)
 			.then(
 				(result) => {
@@ -136,13 +125,6 @@ const EmailSection = () => {
 							id="message"
 							className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
 							placeholder="Leave your message here"
-						/>
-					</div>
-					<div className="flex justify-center mb-2">
-						<ReCAPTCHA
-							ref={refCaptcha}
-							sitekey={process.env.CAPTCHA_SITE_KEY}
-							onChange={sendEmail}
 						/>
 					</div>
 
