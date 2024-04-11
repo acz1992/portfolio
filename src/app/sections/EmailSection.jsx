@@ -1,16 +1,15 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 import emailjs from "emailjs-com";
 
-let emailSubmitted = false;
-
 const EmailSection = () => {
 	const form = useRef();
+	const [emailSubmitted, setEmailSubmitted] = useState(false);
 
 	const sendEmail = (e) => {
 		e.preventDefault();
@@ -25,7 +24,7 @@ const EmailSection = () => {
 			.then(
 				(result) => {
 					console.log("Email successfully sent!", result.text);
-					emailSubmitted = true;
+					setEmailSubmitted(true);
 				},
 				(error) => {
 					console.error("Failed to send email. Error:", error.text);
@@ -35,6 +34,22 @@ const EmailSection = () => {
 		e.target.reset();
 	};
 
+	useEffect(() => {
+		if (emailSubmitted) {
+			const handleOutsideClick = (e) => {
+				if (!form.current.contains(e.target)) {
+					setEmailSubmitted(false);
+				}
+			};
+
+			document.addEventListener("mousedown", handleOutsideClick);
+
+			return () => {
+				document.removeEventListener("mousedown", handleOutsideClick);
+			};
+		}
+	}, [emailSubmitted]);
+
 	return (
 		<section
 			id="contact"
@@ -43,12 +58,10 @@ const EmailSection = () => {
 			<div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
 
 			<div className="flex flex-col items-center justify-center">
-				{/*  className="flex flex-col justify-center items-center" */}
 				<h5 className="text-xl font-bold text-white my-2">
 					Let&apos;s Connect
 				</h5>
 				<p className="text-justify text-[#ADB7BE] mb-4 max-w-md">
-					{" "}
 					I&apos;m currently looking for new opportunities, my inbox
 					is always open. Whether you have a question or just want to
 					say hi, I&apos;ll try my best to get back to you!
@@ -115,19 +128,21 @@ const EmailSection = () => {
 					</div>
 
 					<button
-						value=""
 						type="submit"
 						className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
 					>
 						Send Message
 					</button>
-
-					{emailSubmitted && (
-						<p className="text-green-500 text-sm mt-2">
-							Email sent succesfully!
-						</p>
-					)}
 				</form>
+				{emailSubmitted && (
+					<div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
+						<div className="bg-white p-5 rounded-lg">
+							<p className="text-green-500  text-base font-bold mt-2">
+								I&apos;ll be in touch soon
+							</p>
+						</div>
+					</div>
+				)}
 			</div>
 		</section>
 	);
