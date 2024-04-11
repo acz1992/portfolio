@@ -118,7 +118,6 @@ const EmailSection = () => {
 						/>
 					</div>
 					<ReCAPTCHA
-						ref={recaptchaRef}
 						onChange={onChange}
 						sitekey={process.env.CAPTCHA_SITE_KEY}
 					/>
