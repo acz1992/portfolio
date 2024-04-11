@@ -124,7 +124,7 @@ const EmailSection = () => {
 							placeholder="Subject line"
 						/>
 					</div>
-					<div className="mb-6">
+					<div className="mb-2">
 						<label
 							htmlFor="message"
 							className="text-white block text-sm mb-2 font-medium"
@@ -138,7 +138,7 @@ const EmailSection = () => {
 							placeholder="Leave your message here"
 						/>
 					</div>
-					<div>
+					<div className="flex justify-center mb-2">
 						<ReCAPTCHA
 							ref={refCaptcha}
 							sitekey={process.env.CAPTCHA_SITE_KEY}
