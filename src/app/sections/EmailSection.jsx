@@ -9,18 +9,28 @@ import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const EmailSection = () => {
+	const refCaptcha = useRef();
+
 	const form = useRef();
 	const [emailSubmitted, setEmailSubmitted] = useState(false);
 
 	const sendEmail = (e) => {
 		e.preventDefault();
 
+		const token = refCaptcha.current.getValue();
+
+		const params = {
+			"g-recaptcha-response": token,
+		};
+
 		emailjs
 			.sendForm(
 				process.env.YOUR_SERVICE_ID,
 				process.env.YOUR_TEMPLATE_ID,
 				form.current,
-				process.env.YOUR_PUBLIC_KEY
+				params,
+				process.env.YOUR_PUBLIC_KEY,
+				"g-recaptcha-response"
 			)
 			.then(
 				(result) => {
@@ -35,6 +45,7 @@ const EmailSection = () => {
 		e.target.reset();
 	};
 
+	// Overlay confirming Form Submission
 	useEffect(() => {
 		if (emailSubmitted) {
 			const handleOutsideClick = (e) => {
@@ -127,10 +138,13 @@ const EmailSection = () => {
 							placeholder="Leave your message here"
 						/>
 					</div>
-					<ReCAPTCHA
-						sitekey={process.env.CAPTCHA_SITE_KEY}
-						onChange={sendEmail}
-					/>
+					<div>
+						<ReCAPTCHA
+							ref={refCaptcha}
+							sitekey={process.env.CAPTCHA_SITE_KEY}
+							onChange={sendEmail}
+						/>
+					</div>
 
 					<button
 						type="submit"
