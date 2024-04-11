@@ -8,7 +8,6 @@ import Image from "next/image";
 import emailjs from "emailjs-com";
 
 // Initialize EmailJS with user ID
-emailjs.init("your_user_id");
 
 const EmailSection = () => {
 	const form = useRef();
