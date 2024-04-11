@@ -111,7 +111,10 @@ const EmailSection = () => {
 							placeholder="Leave your message here"
 						/>
 					</div>
-
+					<ReCAPTCHA
+						render="explicit"
+						sitekey={process.env.CAPTCHA_SITE_KEY}
+					/>
 					<button
 						value=""
 						type="submit"
