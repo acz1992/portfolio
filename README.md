@@ -8,13 +8,13 @@ I am a Junior Web Developer currently working on smaller, freelance projects whi
 
 ### The Mission
 
-I needed a Website where I could introduce myself, outline my technical skills, and showcase examples of my work. I had previously made a [portfolio website](https://acz1992.github.io/adam-zdan-portfolio-first-iteration/index.html) in order to practice Vanilla JavaScript, but needed a more professional looking website in order to really sell myself. 
+I needed a Website where I could introduce myself, outline my technical skills, and showcase examples of my work. I had previously made a [portfolio website](https://acz1992.github.io/adam-zdan-portfolio-first-iteration/index.html) in order to practice Vanilla JavaScript, but needed a more professional looking website in order to really sell myself.
 
 ## Tech / Resources
 
 ### Stack
 
-This company website project uses Next.js 14, JavaScript and Tailwind CSS. It was also my first time using the Framer-Motion library in order to create engaging transitions and animations. 
+This company website project uses Next.js 14, JavaScript and Tailwind CSS. It was also my first time using the Framer-Motion library in order to create engaging transitions and animations.
 
 ### Resources
 
@@ -26,6 +26,9 @@ This company website project uses Next.js 14, JavaScript and Tailwind CSS. It wa
 
 -   **React Type Animations**: Adds engaging typewriter-style animations to text elements, enhancing the visual appeal and interactivity of web interfaces.
 
+Email JS
+
+reCAPTCHA -https://www.google.com/recaptcha/about/
 
 ## Future
 
@@ -33,5 +36,3 @@ This company website project uses Next.js 14, JavaScript and Tailwind CSS. It wa
 
 -   **Email.js**: Hook up form to my email
 -   **Navigation Bug**: Fix bug so NavLinks properly link to top of relevant section
-
-

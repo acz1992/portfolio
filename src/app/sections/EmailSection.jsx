@@ -6,8 +6,7 @@ import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 import emailjs from "emailjs-com";
-
-// Initialize EmailJS with user ID
+import ReCAPTCHA from "react-google-recaptcha";
 
 const EmailSection = () => {
 	const form = useRef();
@@ -111,6 +110,10 @@ const EmailSection = () => {
 							placeholder="Leave your message here"
 						/>
 					</div>
+					<ReCAPTCHA
+						sitekey={process.env.CAPTCHA_SITE_KEY}
+						onChange={sendEmail}
+					/>
 					<button
 						value=""
 						type="submit"
