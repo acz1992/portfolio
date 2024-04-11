@@ -8,16 +8,15 @@ import Image from "next/image";
 import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
 
-function siteChange(value) {
-	console.log("Captcha value:", value);
-}
+const recaptchaRef = React.createRef();
 
 const EmailSection = () => {
 	const form = useRef();
 
 	const sendEmail = (e) => {
 		e.preventDefault();
-
+		const recaptchaValue = recaptchaRef.current.getValue();
+		this.props.onSubmit(recaptchaValue);
 		emailjs
 			.sendForm(
 				process.env.YOUR_SERVICE_ID,
@@ -119,7 +118,8 @@ const EmailSection = () => {
 						/>
 					</div>
 					<ReCAPTCHA
-						render="explicit"
+						ref={recaptchaRef}
+						onChange={onChange}
 						sitekey={process.env.CAPTCHA_SITE_KEY}
 					/>
 					<button
