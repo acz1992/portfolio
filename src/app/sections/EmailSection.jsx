@@ -6,17 +6,15 @@ import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 import emailjs from "emailjs-com";
-import ReCAPTCHA from "react-google-recaptcha";
 
-const recaptchaRef = React.createRef();
+let emailSubmitted = false;
 
 const EmailSection = () => {
 	const form = useRef();
 
 	const sendEmail = (e) => {
 		e.preventDefault();
-		const recaptchaValue = recaptchaRef.current.getValue();
-		this.props.onSubmit(recaptchaValue);
+
 		emailjs
 			.sendForm(
 				process.env.YOUR_SERVICE_ID,
@@ -27,11 +25,13 @@ const EmailSection = () => {
 			.then(
 				(result) => {
 					console.log("Email successfully sent!", result.text);
+					emailSubmitted = true;
 				},
 				(error) => {
 					console.error("Failed to send email. Error:", error.text);
 				}
 			);
+
 		e.target.reset();
 	};
 
@@ -113,11 +113,7 @@ const EmailSection = () => {
 							placeholder="Leave your message here"
 						/>
 					</div>
-					<ReCAPTCHA
-						ref={recaptchaRef}
-						sitekey={process.env.CAPTCHA_SITE_KEY}
-						onChange={sendEmail}
-					/>
+
 					<button
 						value=""
 						type="submit"
@@ -126,11 +122,11 @@ const EmailSection = () => {
 						Send Message
 					</button>
 
-					{/* 	{emailSubmitted && (
+					{emailSubmitted && (
 						<p className="text-green-500 text-sm mt-2">
 							Email sent succesfully!
 						</p>
-					)} */}
+					)}
 				</form>
 			</div>
 		</section>
