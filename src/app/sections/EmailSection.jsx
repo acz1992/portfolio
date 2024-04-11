@@ -118,8 +118,9 @@ const EmailSection = () => {
 						/>
 					</div>
 					<ReCAPTCHA
-						onChange={onChange}
+						ref={recaptchaRef}
 						sitekey={process.env.CAPTCHA_SITE_KEY}
+						onChange={onChange}
 					/>
 					<button
 						value=""
