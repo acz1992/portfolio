@@ -8,6 +8,10 @@ import Image from "next/image";
 import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
 
+function siteChange(value) {
+	console.log("Captcha value:", value);
+}
+
 const EmailSection = () => {
 	const form = useRef();
 
@@ -63,7 +67,10 @@ const EmailSection = () => {
 				</div>
 			</div>
 			<div>
-				<ReCAPTCHA sitekey={process.env.CAPTCHA_SITE_KEY} />
+				<ReCAPTCHA
+					siteChange={siteChange}
+					sitekey={process.env.CAPTCHA_SITE_KEY}
+				/>
 				<form className="flex flex-col" ref={form} onSubmit={sendEmail}>
 					<div className="mb-6">
 						<label
