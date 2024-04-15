@@ -45,10 +45,10 @@ const projectsData = [
 		id: 5,
 		title: "Hamish's Outdoor Services",
 		description: "For all your outdoor needs",
-		image: "/images/projects/5.png",
+		image: "/images/projects/hamishoutdoor.png",
 		tag: ["All", "Web"],
-		gitUrl: "/",
-		previewUrl: "/",
+		gitUrl: "https://github.com/acz1992/hamish-outdoor-services",
+		previewUrl: "https://hamish-outdoor-services.vercel.app/",
 	},
 	{
 		id: 6,
