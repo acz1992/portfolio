@@ -3,6 +3,7 @@ import React, { useState, useTransition } from "react";
 import Image from "next/image";
 import TabButton from "../components/Skills/TabButton";
 import SkillsTab from "../components/Skills/SkillsTab";
+import textContent from "../../data/textContent";
 
 const TAB_DATA = [
 	{
@@ -66,19 +67,10 @@ const TAB_DATA = [
 			</ul>
 		),
 	},
-	/* {
-		title: "Certifications",
-		id: "certifications",
-		content: (
-			<ul className="list-disc pl-2">
-				<li>German Telc B2</li>
-				<li>WSET 2 Wine Certification</li>
-			</ul>
-		),
-	}, */
 ];
 
 const AboutMe = () => {
+	const { aboutMe } = textContent;
 	const [tab, setTab] = useState("skills");
 	const [isPending, startTransition] = useTransition();
 
@@ -95,16 +87,7 @@ const AboutMe = () => {
 					<h1 className="text-4xl font-bold text-white mb-4">
 						About Me
 					</h1>
-					<p className="text-base md:text-lg">
-						I am a full stack web developer with a passion for
-						creating interactive and responsive web applications. I
-						have experience working with JavaScript, React, Redux,
-						Node.js, Express, PostgreSQL, Sequelize, HTML, CSS, and
-						Git. I am a quick learner and I am always looking to
-						expand my knowledge and skill set. I am a team player
-						and I am excited to work with others to create amazing
-						applications.
-					</p>
+					<p className="text-base md:text-lg">{aboutMe}</p>
 					<div className="flex flex-row justify-start mt-8">
 						<TabButton
 							selectTab={() => handleTabChange("skills")}

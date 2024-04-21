@@ -4,8 +4,10 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import textConent from "../../data/textContent.json";
 
 const HeroSection = () => {
+	const { subHeader } = textConent;
 	return (
 		<section className="lg-py-16">
 			<div className="grid grid-cols-1 sm:grid-cols-12">
@@ -35,8 +37,7 @@ const HeroSection = () => {
 						/>
 					</h1>
 					<p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-						Creating user-friendly websites and simplifying life
-						through tech.
+						{subHeader}
 					</p>
 					<div>
 						<a href="mailto:acz1992@hotmail.co.uk">

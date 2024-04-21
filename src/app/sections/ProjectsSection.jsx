@@ -3,63 +3,7 @@ import React, { useState, useRef } from "react";
 import ProjectsCard from "../components/Projects/ProjectsCard";
 import ProjectTag from "../components/Projects/ProjectTag";
 import { motion, useInView } from "framer-motion";
-
-const projectsData = [
-	{
-		id: 1,
-		title: "MJBeers Photography",
-		description: "Photography Portfolio Site",
-		image: "/images/projects/mitchphotography.png",
-		tag: ["All", "Web"],
-		gitUrl: "https://github.com/acz1992/mjbeers_photography",
-		previewUrl: "https://mjbeers-photography.vercel.app/",
-	},
-	{
-		id: 2,
-		title: "Task Manager App",
-		description: "Organise the overwhelming",
-		image: "/images/projects/taskmanager.png",
-		tag: ["All", "App"],
-		gitUrl: "https://github.com/acz1992/task_manager/",
-		previewUrl: "https://portfolio-website-three-xi-41.vercel.app/",
-	},
-	{
-		id: 3,
-		title: "Blickfang Blumen",
-		description: "Custom floral arrangements",
-		image: "/images/projects/kateblickfang.png",
-		tag: ["All", "Web"],
-		gitUrl: "https://github.com/acz1992/blickfang-blumen",
-		previewUrl: "https://blickfang-blumen.vercel.app/",
-	},
-	{
-		id: 4,
-		title: "Movie Booking App",
-		description: "Book films seamlessly",
-		image: "/images/projects/4.png",
-		tag: ["All", "App"],
-		gitUrl: "/",
-		previewUrl: "/",
-	},
-	{
-		id: 5,
-		title: "Hamish's Outdoor Services",
-		description: "For all your outdoor needs",
-		image: "/images/projects/hamishoutdoor.png",
-		tag: ["All", "Web"],
-		gitUrl: "https://github.com/acz1992/hamish-outdoor-services",
-		previewUrl: "https://hamish-outdoor-services.vercel.app/",
-	},
-	{
-		id: 6,
-		title: "Listfull",
-		description: "Simplify your weekly shop!",
-		image: "/images/projects/6.png",
-		tag: ["All", "App"],
-		gitUrl: "/",
-		previewUrl: "/",
-	},
-];
+import projectsData from "../../data/projects.json"; // Import projectsData
 
 const cardVariants = {
 	initial: { y: 50, opacity: 0 },
