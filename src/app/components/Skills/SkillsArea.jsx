@@ -1,6 +1,6 @@
 import React from "react";
 import SkillSquare from "./SkillSquare";
-import skillsDatas from "../../utils/skills";
+import skillsDatas from "../../../utils/skills";
 
 const SkillsArea = ({ title, name }) => {
 	const filteredSkills = skillsDatas.filter(
