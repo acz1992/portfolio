@@ -30,10 +30,10 @@
 		"id": 4,
 		"title": "Movie Booking App",
 		"description": "Book films seamlessly",
-		"image": "/images/projects/4.png",
+		"image": "/images/projects/movie.png",
 		"tag": ["All", "App"],
-		"gitUrl": "/",
-		"previewUrl": "/"
+		"gitUrl": "https://github.com/acz1992/camp-8-midterm-group-2",
+		"previewUrl": "https://github.com/acz1992/camp-8-midterm-group-2"
 	},
 	{
 		"id": 5,
@@ -48,9 +48,9 @@
 		"id": 6,
 		"title": "Listfull",
 		"description": "Simplify your weekly shop!",
-		"image": "/images/projects/6.png",
+		"image": "/images/projects/listful.png",
 		"tag": ["All", "App"],
-		"gitUrl": "/",
-		"previewUrl": "/"
+		"gitUrl": "https://github.com/acz1992/camp8-final-project",
+		"previewUrl": "https://github.com/acz1992/camp8-final-project"
 	}
 ]
