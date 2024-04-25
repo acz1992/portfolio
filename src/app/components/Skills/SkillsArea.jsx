@@ -13,7 +13,7 @@ const SkillsArea = ({ title, name }) => {
 				<h3 className="text-center font-semibold text-1xl mb-2 font-lg">
 					{title}
 				</h3>
-				<div className="flex flex-wrap gap-2 justify-center items-center">
+				<div className="flex flex-wrap gap-2 items-center">
 					{filteredSkills.map((filteredSkill) => (
 						<SkillSquare
 							key={filteredSkill.id}

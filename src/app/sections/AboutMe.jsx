@@ -31,7 +31,7 @@ const TAB_DATA = [
 		title: "Education",
 		id: "education",
 		content: (
-			<ul className="font-semibold text-1xllist-disc list-none pl-2 flex flex-col gap-3">
+			<ul className="font-semibold text-1xl list-disc list-none pl-2 flex flex-col gap-3">
 				<div className="flex items-center gap-3 ">
 					<Image
 						src="/images/lancasteruniversity.jpeg"
@@ -70,7 +70,7 @@ const TAB_DATA = [
 ];
 
 const AboutMe = () => {
-	const { aboutMe } = textContent;
+	const { aboutMepOne, aboutMepTwo } = textContent;
 	const [tab, setTab] = useState("skills");
 	const [isPending, startTransition] = useTransition();
 
@@ -81,14 +81,15 @@ const AboutMe = () => {
 	};
 
 	return (
-		<section id="about" className="text-white ">
-			<div className="grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-				<div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-					<h1 className="text-4xl font-bold text-white mb-4">
-						About Me
-					</h1>
-					<p className="text-base md:text-lg">{aboutMe}</p>
-					<div className="flex flex-row justify-start mt-8">
+		<section id="about" className="text-white mb-10">
+			<h1 className="text-4xl font-bold text-white mb-4">About Me</h1>
+			<div className="flex flex-col  lg:flex-row lg:gap-28 lg:h-[500px] ">
+				<div className="w-full lg:w-1/2 gap-10 flex flex-col justify-around ">
+					<p className="text-base md:text-lg">{aboutMepOne}</p>
+					<p className="text-base md:text-lg">{aboutMepTwo}</p>
+				</div>
+				<div className="mt-10 lg:w-1/2 md:mx-auto">
+					<div className="flex justify-center lg:justify-start ">
 						<TabButton
 							selectTab={() => handleTabChange("skills")}
 							active={tab === "skills"}
@@ -103,15 +104,8 @@ const AboutMe = () => {
 							{" "}
 							Education{" "}
 						</TabButton>
-						{/* <TabButton
-							selectTab={() => handleTabChange("certifications")}
-							active={tab === "certifications"}
-						>
-							{" "}
-							Certifications{" "}
-						</TabButton> */}
 					</div>
-					<div className="mt-4 border-[#33353F] border rounded-md p-3">
+					<div className="mt-4 border-[#33353F] w-fit border rounded-md p-3 ">
 						{tab ===
 						"education" /* || tab === "certifications" */ ? (
 							TAB_DATA.find((t) => t.id === tab).content
@@ -120,13 +114,6 @@ const AboutMe = () => {
 						)}
 					</div>
 				</div>
-				<Image
-					src="/images/code-one.jpg"
-					alt="Books and Laptop"
-					width={500}
-					height={500}
-					className="rounded-full"
-				/>
 			</div>
 		</section>
 	);
