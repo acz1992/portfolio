@@ -9,33 +9,35 @@ import textConent from "../../data/textContent.json";
 const HeroSection = () => {
 	const { subHeader } = textConent;
 	return (
-		<section className="lg-py-16 flex justify-center">
-			<div className="grid grid-cols-1 sm:grid-cols-12 max-w-6xl">
+		<section id="hero-section" className="lg:py-16 flex justify-center">
+			<div className="flex flex-col md:flex-row max-w-6xl  xl:gap-20">
 				<motion.div
 					initial={{ opacity: 0, scale: 0.5 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.5 }}
-					className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+					className="text-center sm:text-left "
 				>
-					<h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-5xl lg:leading-normal font-extrabold">
-						<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-800 via-primary-500 to-primary-400">
-							Hello, I&apos;m{" "}
-						</span>
-						<br></br>
-						<TypeAnimation
-							sequence={[
-								"Adam",
-								1000,
-								"a Fullstack Developer",
-								1000,
-								"a Tech Enthusiast",
-								1000,
-							]}
-							wrapper="span"
-							speed={50}
-							repeat={Infinity}
-						/>
-					</h1>
+					<div className="h-8 mb-24 md:mb-32 ">
+						<h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-5xl lg:leading-normal font-extrabold ">
+							<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-800 via-primary-500 to-primary-400">
+								Hello, I&apos;m{" "}
+							</span>
+							<br></br>
+							<TypeAnimation
+								sequence={[
+									"Adam",
+									1000,
+									"a Fullstack Developer",
+									1000,
+									"a Tech Enthusiast",
+									1000,
+								]}
+								wrapper="span"
+								speed={50}
+								repeat={Infinity}
+							/>
+						</h1>
+					</div>
 					<p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-lg">
 						{subHeader}
 					</p>
@@ -60,7 +62,7 @@ const HeroSection = () => {
 					initial={{ opacity: 0, scale: 0.5 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.5 }}
-					className="col-span-4 place-self-center mt-4 lg:mt-0"
+					className="mt-4 lg:mt-0 flex m-auto"
 				>
 					<div className="bg-[#181818] lg:w-[400px] lg:h-[400px] w-[250px] h-[250px] rounded-full relative">
 						<Image
