@@ -45,7 +45,7 @@ const Navbar = () => {
 					href={"/"}
 					className="text-3xl md:text-2xl text-white font-semibold"
 					style={{
-						opacity: showHome ? 0 : 1,
+						opacity: showHome ? 1 : 0,
 						transition: "opacity 0.5s ease-in-out",
 					}}
 				>
