@@ -12,14 +12,16 @@ export default function Home() {
 		//Otherwise bg-[#121212 ]
 		<main className="flex min-h-screen flex-col bg-[#202833]">
 			<Navbar />
-			<div className="container mt-24 mx-auto px-12 py-4">
+			<div className="container mt-24 mx-auto px-12 py-4 mb-10">
 				<HeroSection />
 				<AchievementsSection />
 				<AboutMe />
 				<ProjectsSection />
 				<EmailSection />
 			</div>
-			<Footer />
+			<div className="w-full">
+				<Footer />
+			</div>
 		</main>
 	);
 }
