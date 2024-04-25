@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
@@ -22,6 +22,21 @@ const navLinks = [
 
 const Navbar = () => {
 	const [navbarOpen, setNavbarOpen] = useState(false);
+	const [showHome, setShowHome] = useState(true);
+	const [top, setTop] = useState(true);
+
+	useEffect(() => {
+		const scrollHandler = () => {
+			const heroSection = document.getElementById("hero-section");
+			if (heroSection) {
+				const offset = heroSection.getBoundingClientRect().bottom;
+				setShowHome(window.pageYOffset > offset);
+				setTop(window.pageYOffset > 10);
+			}
+		};
+		window.addEventListener("scroll", scrollHandler);
+		return () => window.removeEventListener("scroll", scrollHandler);
+	}, []);
 
 	return (
 		<nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#181818] bg-opacity-100">
@@ -29,6 +44,10 @@ const Navbar = () => {
 				<Link
 					href={"/"}
 					className="text-3xl md:text-2xl text-white font-semibold"
+					style={{
+						opacity: showHome ? 0 : 1,
+						transition: "opacity 0.5s ease-in-out",
+					}}
 				>
 					Home
 				</Link>

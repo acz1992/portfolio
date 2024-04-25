@@ -9,7 +9,7 @@ import textConent from "../../data/textContent.json";
 const HeroSection = () => {
 	const { subHeader } = textConent;
 	return (
-		<section className="lg-py-16 flex justify-center">
+		<section id="hero-section" className="lg-py-16 flex justify-center">
 			<div className="grid grid-cols-1 sm:grid-cols-12 max-w-6xl">
 				<motion.div
 					initial={{ opacity: 0, scale: 0.5 }}
