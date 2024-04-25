@@ -9,7 +9,7 @@ const skillsAreas = [
 
 const SkillsTab = () => {
 	return (
-		<div className="flex flex-col items-center justify-center gap-1">
+		<div className="flex flex-col justify-center gap-1">
 			{skillsAreas.map((skillsArea) => (
 				<SkillsArea
 					key={skillsArea.index}
