@@ -77,6 +77,7 @@
 		"description": "Made with Elementor",
 		"image": "/images/projects/taskmanager.png",
 		"tag": ["All", "Web"],
+		"gitUrl": "https://github.com/acz1992/ruminations-blog",
 		"previewUrl": "https://sangtanzer.de/"
 	},
 	{
@@ -85,6 +86,7 @@
 		"description": "Made with WordPress",
 		"image": "/images/projects/taskmanager.png",
 		"tag": ["All", "Web"],
+		"gitUrl": "https://github.com/acz1992/ruminations-blog",
 		"previewUrl": "https://sangtanzer.de/lp-ki-marketing-revolution/"
 	}
 ]
