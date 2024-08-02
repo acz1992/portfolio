@@ -10,12 +10,12 @@
 	},
 	{
 		"id": 2,
-		"title": "Task Manager App",
-		"description": "Organise the overwhelming",
+		"title": "Black Swan Finance",
+		"description": "Company Financial Performance",
 		"image": "/images/projects/taskmanager.png",
 		"tag": ["All", "App"],
-		"gitUrl": "https://github.com/acz1992/task_manager/",
-		"previewUrl": "https://task-organiser-manager.vercel.app/"
+		"gitUrl": "https://github.com/Ze-Adam-Finance/Finance-app",
+		"previewUrl": "https://blackswanfinance.vercel.app/"
 	},
 	{
 		"id": 3,
@@ -52,5 +52,39 @@
 		"tag": ["All", "App"],
 		"gitUrl": "https://github.com/acz1992/camp8-final-project",
 		"previewUrl": "https://github.com/acz1992/camp8-final-project"
+	},
+	{
+		"id": 7,
+		"title": "Task Manager App",
+		"description": "Organise the overwhelming",
+		"image": "/images/projects/taskmanager.png",
+		"tag": ["All", "App"],
+		"gitUrl": "https://github.com/acz1992/task_manager/",
+		"previewUrl": "https://task-organiser-manager.vercel.app/"
+	},
+	{
+		"id": 8,
+		"title": "Remote Ruminations",
+		"description": "Collection of personal writings",
+		"image": "/images/projects/taskmanager.png",
+		"tag": ["All", "Web"],
+		"gitUrl": "https://github.com/acz1992/ruminations-blog",
+		"previewUrl": "https://task-organiser-manager.vercel.app/"
+	},
+	{
+		"id": 9,
+		"title": "Sang Tanzer",
+		"description": "Made with Elementor",
+		"image": "/images/projects/taskmanager.png",
+		"tag": ["All", "Web"],
+		"previewUrl": "https://sangtanzer.de/"
+	},
+	{
+		"id": 10,
+		"title": "KI Revolution Landing Page",
+		"description": "Made with WordPress",
+		"image": "/images/projects/taskmanager.png",
+		"tag": ["All", "Web"],
+		"previewUrl": "https://sangtanzer.de/lp-ki-marketing-revolution/"
 	}
 ]
